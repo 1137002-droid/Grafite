@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Grafite: arte que conecta | Metodologia de Extensão | UFCSPA</title>
+<meta name="description" content="Pesquisa sobre grafite como método de extensão: caracterização, objetivos, contextos, exemplos, passo a passo e referências. Universidade Federal de Ciências da Saúde de Porto Alegre.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1f1b2d; --paper:#f7f3ea; --orange:#ff5a36; --yellow:#ffd23f; --teal:#2ec4b6; --pink:#ff4f9a;
+  --teal-soft:#c9f1ec; --yellow-soft:#fff0b8; --orange-soft:#ffd9cf; --pink-soft:#ffd3e6;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;font-family:"Mulish",Arial,sans-serif;font-size:18px;line-height:1.65;color:var(--ink);background:var(--paper);padding-top:env(safe-area-inset-top,0px)}
+h1,h2,h3{font-family:"Permanent Marker","Mulish",Arial,sans-serif;font-weight:400;line-height:1.1;margin:0 0 .5em}
+h2{font-size:clamp(2.2rem,5vw,3.4rem)}
+h3{font-size:1.5rem}
+p{margin:0 0 1em;max-width:70ch}
+a{color:inherit}
+:focus-visible{outline:4px solid var(--ink);outline-offset:3px;box-shadow:0 0 0 7px var(--yellow)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+.sr{position:absolute;left:-9999px}
+
+/* barra de navegação */
+nav{position:sticky;top:0;z-index:20;background:var(--ink);border-bottom:5px solid var(--orange)}
+nav ul{list-style:none;margin:0 auto;padding:10px 16px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center;max-width:1100px}
+nav a{display:block;text-decoration:none;color:var(--paper);font-weight:800;font-size:.95rem;padding:6px 14px;border-radius:999px;border:2px solid transparent}
+nav li:nth-child(5n+1) a:hover{background:var(--orange);color:var(--ink)}
+nav li:nth-child(5n+2) a:hover{background:var(--yellow);color:var(--ink)}
+nav li:nth-child(5n+3) a:hover{background:var(--teal);color:var(--ink)}
+nav li:nth-child(5n+4) a:hover{background:var(--pink);color:var(--ink)}
+nav li:nth-child(5n+5) a:hover{background:var(--paper);color:var(--ink)}
+
+/* capa */
+.hero{position:relative;overflow:hidden;background:var(--ink);color:var(--paper);padding:88px 0 96px;
+  background-image:
+   radial-gradient(circle at 12% 20%,rgba(255,90,54,.85) 0 90px,transparent 91px),
+   radial-gradient(circle at 88% 14%,rgba(46,196,182,.9) 0 120px,transparent 121px),
+   radial-gradient(circle at 80% 88%,rgba(255,210,63,.9) 0 100px,transparent 101px),
+   radial-gradient(circle at 6% 86%,rgba(255,79,154,.85) 0 110px,transparent 111px),
+   radial-gradient(circle at 50% 8%,rgba(255,210,63,.35) 0 40px,transparent 41px),
+   radial-gradient(circle at 34% 94%,rgba(46,196,182,.4) 0 50px,transparent 51px),
+   repeating-linear-gradient(0deg,rgba(255,255,255,.04) 0 2px,transparent 2px 46px);
+}
+.hero .wrap{position:relative;text-align:center}
+.hero small{display:inline-block;background:var(--yellow);color:var(--ink);font-weight:800;padding:6px 18px;border-radius:999px;transform:rotate(-2deg);margin-bottom:22px}
+.hero h1{font-size:clamp(4rem,16vw,10rem);margin:0;text-shadow:5px 5px 0 var(--ink)}
+.hero h1 span:nth-child(7n+1){color:var(--orange)}
+.hero h1 span:nth-child(7n+2){color:var(--yellow)}
+.hero h1 span:nth-child(7n+3){color:var(--teal)}
+.hero h1 span:nth-child(7n+4){color:var(--pink)}
+.hero h1 span:nth-child(7n+5){color:var(--paper)}
+.hero h1 span:nth-child(7n+6){color:var(--orange)}
+.hero h1 span:nth-child(7n+7){color:var(--yellow)}
+.hero .sub{font-family:"Permanent Marker",sans-serif;font-size:clamp(1.8rem,5vw,3rem);color:var(--paper);margin:6px auto 26px;transform:rotate(-1.5deg);max-width:none;text-shadow:3px 3px 0 var(--pink)}
+.hero .uni{font-weight:800;font-size:1.15rem;max-width:none;margin-bottom:6px}
+.hero .disc{max-width:none;margin-bottom:26px}
+.names{list-style:none;padding:0;margin:0 auto;display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:900px}
+.names li{background:var(--paper);color:var(--ink);font-weight:800;padding:8px 18px;border-radius:999px;border:3px solid var(--ink)}
+.names li:nth-child(5n+1){background:var(--orange)}
+.names li:nth-child(5n+2){background:var(--yellow)}
+.names li:nth-child(5n+3){background:var(--teal)}
+.names li:nth-child(5n+4){background:var(--pink)}
+
+/* faixas */
+.band{padding:84px 0;border-top:8px solid var(--ink)}
+.b-paper{background:var(--paper)}
+.b-teal{background:var(--teal-soft)}
+.b-yellow{background:var(--yellow-soft)}
+.b-orange{background:var(--orange-soft)}
+.b-pink{background:var(--pink-soft)}
+.b-ink{background:var(--ink);color:var(--paper);border-top-color:var(--orange)}
+.tag{display:inline-block;font-weight:800;font-size:.95rem;padding:4px 14px;border-radius:999px;border:3px solid var(--ink);margin-bottom:14px}
+.t-orange{background:var(--orange)} .t-yellow{background:var(--yellow)} .t-teal{background:var(--teal)} .t-pink{background:var(--pink)}
+.lead{font-size:1.2rem}
+.src{font-size:.85rem;font-weight:600;opacity:.8}
+
+/* cartões estilo adesivo */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:26px;margin-top:30px}
+.card{background:#fff;color:var(--ink);border:4px solid var(--ink);border-radius:18px 6px 18px 6px;padding:24px;box-shadow:8px 8px 0 var(--ink)}
+.card:nth-child(4n+2){border-radius:6px 18px 6px 18px}
+.card h3{margin-bottom:.4em}
+.card p:last-child{margin-bottom:0}
+.c-orange{border-top:16px solid var(--orange)}
+.c-teal{border-top:16px solid var(--teal)}
+.c-yellow{border-top:16px solid var(--yellow)}
+.c-pink{border-top:16px solid var(--pink)}
+
+/* linha do tempo */
+.timeline{list-style:none;margin:36px 0 0;padding:0 0 0 34px;border-left:8px solid var(--ink)}
+.timeline li{position:relative;margin:0 0 28px;background:#fff;border:4px solid var(--ink);border-radius:14px;padding:16px 20px;box-shadow:6px 6px 0 var(--ink)}
+.timeline li::before{content:"";position:absolute;left:-58px;top:20px;width:26px;height:26px;border-radius:50%;border:5px solid var(--ink);background:var(--orange)}
+.timeline li:nth-child(4n+2)::before{background:var(--teal)}
+.timeline li:nth-child(4n+3)::before{background:var(--yellow)}
+.timeline li:nth-child(4n+4)::before{background:var(--pink)}
+.timeline b.when{display:block;font-family:"Permanent Marker",sans-serif;font-weight:400;font-size:1.35rem;color:var(--ink)}
+.timeline p{margin:0}
+
+/* caixa da lei */
+.law{background:var(--ink);color:var(--paper);border:6px solid var(--yellow);border-radius:18px;padding:30px;margin-top:30px;box-shadow:10px 10px 0 var(--pink)}
+.law h3{color:var(--yellow)}
+.law ul{padding-left:1.2em;margin:0 0 1em}
+.law li{margin-bottom:.5em}
+.law p{max-width:none}
+
+/* passos */
+.steps{list-style:none;counter-reset:passo;padding:0;margin:30px 0 0;display:grid;gap:18px}
+.steps li{counter-increment:passo;position:relative;background:#fff;border:4px solid var(--ink);border-radius:14px;padding:16px 20px 16px 84px;box-shadow:6px 6px 0 var(--ink);min-height:72px}
+.steps li::before{content:counter(passo);position:absolute;left:16px;top:50%;transform:translateY(-50%) rotate(-6deg);width:52px;height:52px;border-radius:50%;background:var(--orange);border:4px solid var(--ink);font-family:"Permanent Marker",sans-serif;font-size:1.7rem;display:flex;align-items:center;justify-content:center}
+.steps li:nth-child(4n+2)::before{background:var(--teal)}
+.steps li:nth-child(4n+3)::before{background:var(--yellow)}
+.steps li:nth-child(4n+4)::before{background:var(--pink)}
+.steps b{display:block}
+
+.note{background:var(--yellow);border:4px dashed var(--ink);border-radius:14px;padding:20px 24px;margin-top:30px}
+.note p{max-width:none}
+.note p:last-child{margin:0}
+
+/* referências */
+.refs{list-style:none;margin:30px 0 0;padding:0}
+.refs li{margin:0 0 18px;padding:14px 18px;background:#fff;color:var(--ink);border-left:12px solid var(--teal);border-radius:0 12px 12px 0;font-size:1rem;line-height:1.5;text-align:left;word-break:break-word}
+.refs li:nth-child(4n+2){border-left-color:var(--orange)}
+.refs li:nth-child(4n+3){border-left-color:var(--yellow)}
+.refs li:nth-child(4n+4){border-left-color:var(--pink)}
+.falta{background:var(--yellow);font-weight:800;padding:0 4px}
+
+footer{background:var(--ink);color:var(--paper);text-align:center;padding:48px 0 calc(48px + env(safe-area-inset-bottom,0px));border-top:8px solid var(--pink)}
+footer p{margin:0 auto 8px;max-width:none}
+footer .names{margin-top:16px}
+
+@media (max-width:640px){
+  body{font-size:17px}
+  .band{padding:60px 0}
+  .steps li{padding-left:76px}
+}
+</style>
+</head>
+<body>
+
+<nav aria-label="Seções da página">
+  <ul>
+    <li><a href="#caracterizacao">Caracterização</a></li>
+    <li><a href="#objetivos">Objetivos</a></li>
+    <li><a href="#contextos">Contextos</a></li>
+    <li><a href="#lei">A lei</a></li>
+    <li><a href="#exemplos">Exemplos</a></li>
+    <li><a href="#pratica">Na prática</a></li>
+    <li><a href="#evidencias">Evidências</a></li>
+    <li><a href="#referencias">Referências</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <small>Metodologia de Extensão</small>
+    <h1 aria-label="Grafite"><span>G</span><span>R</span><span>A</span><span>F</span><span>I</span><span>T</span><span>E</span></h1>
+    <p class="sub">arte que conecta</p>
+    <p class="uni">Universidade Federal de Ciências da Saúde de Porto Alegre (UFCSPA)</p>
+    <p class="disc">Pesquisa sobre o grafite como método de extensão</p>
+    <ul class="names" aria-label="Integrantes do grupo">
+      <li>Carolina Elisa Strate</li>
+      <li>Ivo Ricardo Lozekam Junior</li>
+      <li>Luiz Antonio Carbonari</li>
+      <li>Manuela Caversan</li>
+      <li>Vania Maciel</li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+<section class="band b-paper" id="caracterizacao">
+  <div class="wrap">
+    <span class="tag t-orange">1. Caracterização</span>
+    <h2>O que é o grafite?</h2>
+    <p class="lead">O grafite é uma arte feita em paredes e muros. Ele surgiu com força nas zonas urbanas por volta dos anos 70, em Nova Iorque e em São Paulo. É um dos quatro elementos do movimento Hip Hop, tem grande adesão da juventude e carrega mensagem política e beleza nos detalhes (livro <i>Ideias e dicas para o desenvolvimento de processos participativos em saúde</i>, seção 6.4.7).</p>
+    <p>No Brasil, a palavra <b>pichação</b> costuma indicar intervenções de uma cor só, feitas com letras. Já o <b>grafite</b> é arte de rua com formas, cores e técnicas bem variadas, muitas vezes feita com tinta spray (Reimão <i>et al.</i>, 2024).</p>
+
+    <h3 style="margin-top:2em">Surgimento e histórico</h3>
+    <ol class="timeline">
+      <li><b class="when">Fim dos anos 60 · Filadélfia (EUA)</b><p>Jovens como Cornbread passam a escrever seus nomes pela cidade, primeiro com canetas e depois com spray (Gastman; Neelon, [2010]).</p></li>
+      <li><b class="when">Início dos anos 70 · Nova Iorque (EUA)</b><p>Uma geração de jovens escreve seus nomes pelo metrô. Um deles é TAKI 183, que ficou famoso depois de uma reportagem do <i>New York Times</i> em 1971 (Gastman; Neelon, [2010]; Taki 183, [s. d.]).</p></li>
+      <li><b class="when">1978 · São Paulo</b><p>Alex Vallauri cria o grafite “Bota Preta” com molde vazado (estêncil) e o repete por vários pontos da cidade (Reimão <i>et al.</i>, 2024).</p></li>
+      <li><b class="when">Anos 80 · São Paulo</b><p>O grafite se liga à cultura do hip-hop e do break, que tinha ponto de encontro no Largo São Bento. Nessa época, grafite e pichação eram proibidos e feitos na clandestinidade (Reimão <i>et al.</i>, 2024).</p></li>
+      <li><b class="when">Anos 90 · periferias</b><p>Com apoio da gestão municipal de 1989 a 1992 à cultura jovem e periférica, o grafite se expande muito em São Paulo, principalmente nas periferias (Reimão <i>et al.</i>, 2024).</p></li>
+      <li><b class="when">2004 · São Paulo</b><p>O Dia do Grafite entra oficialmente no calendário do município de São Paulo, em homenagem a Alex Vallauri (Reimão <i>et al.</i>, 2024).</p></li>
+      <li><b class="when">2011 · Brasil</b><p>A Lei nº 12.408 descriminaliza o grafite feito com consentimento do dono do espaço (Brasil, 2011).</p></li>
+      <li><b class="when">2023 · São Paulo</b><p>A Lei municipal nº 17.896 reconhece o grafite como manifestação artística e cria um programa de fomento (Reimão <i>et al.</i>, 2024).</p></li>
+    </ol>
+
+    <div class="grid">
+      <article class="card c-teal">
+        <h3>Autoria</h3>
+        <p>O grafite não tem um inventor só: é um movimento coletivo. No Brasil, o primeiro grupo a pintar muros de São Paulo com formas figurativas, a partir de meados dos anos 70, reuniu nomes como Alex Vallauri, Hudinilson Júnior, Carlos Matuck, Waldemar Zaidler, Mauricio Villaça e John Howard. Nos anos 2000, Kobra e Os Gêmeos ganharam reconhecimento internacional (Reimão <i>et al.</i>, 2024).</p>
+      </article>
+      <article class="card c-orange">
+        <h3>Procedimentos</h3>
+        <p>As etapas mais comuns são planejar e fazer o esboço, escolher o local e conseguir o consentimento, preparar a parede e pintar. Segundo Silva (2004), o grafite costuma passar por um longo processo nos cadernos de desenho antes de ir para o muro. Os materiais variam: spray, aerógrafo com compressor, tinta acrílica e esmalte sintético (Reimão <i>et al.</i>, 2024).</p>
+        <p class="src">A sequência de etapas é uma descrição geral do grupo.</p>
+      </article>
+      <article class="card c-yellow">
+        <h3>Curiosidades</h3>
+        <p>Alex Vallauri expôs desenhos e gravuras nas Bienais de São Paulo de 1971, 1972 e 1977 (Reimão <i>et al.</i>, 2024). Na ditadura, a pichação foi usada como forma de resistência, com frases como “Abaixo a ditadura” (Reimão <i>et al.</i>, 2024). Segundo os próprios grafiteiros ouvidos por Silva (2004), o grafite não é uma evolução da pichação.</p>
+      </article>
+      <article class="card c-pink">
+        <h3>Como as pessoas veem</h3>
+        <p>Um estudo com 21 pessoas que passam pelas ruas, mas não produzem esse tipo de intervenção, discutiu como elas entendem a arte reconhecida, o grafite e a pichação (Pizzinato; Tedesco; Hamann, 2017).</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band b-teal" id="objetivos">
+  <div class="wrap">
+    <span class="tag t-teal">2. Objetivos</span>
+    <h2>Para que serve o grafite?</h2>
+    <p class="lead">Segundo o livro, o grafite transforma os cenários das comunidades, ocupa espaços públicos e privados e dá força ao coletivo. Em ações como os mutirões da Rede de Resistência Solidária, de Pernambuco, ele também ajuda a fortalecer as ações comunitárias e a construir um projeto popular de sociedade.</p>
+    <div class="grid">
+      <article class="card c-orange">
+        <h3>Expressar e comunicar</h3>
+        <p>Em entrevistas com seis grafiteiros de Florianópolis, o grafite apareceu como lazer e como jeito de se comunicar com a cidade. Eles também buscam reconhecimento social e protestam contra as condições de vida da população (Furtado; Zanella, 2009).</p>
+      </article>
+      <article class="card c-pink">
+        <h3>Exercer cidadania</h3>
+        <p>Para Silva (2004), o grafite é uma forma de resistência e uma ação de cidadania em que os adolescentes conseguem se engajar.</p>
+      </article>
+      <article class="card c-teal">
+        <h3>Criar vínculos e pertencimento</h3>
+        <p>No mutirão de graffiti na Restinga, em Porto Alegre, o autor destaca que os jovens fortalecem suas redes de convivência e seus laços de pertencimento (Cabreira, [s. d.]).</p>
+      </article>
+      <article class="card c-yellow">
+        <h3>Educar em saúde</h3>
+        <p>Em Campos dos Goytacazes (RJ), um mural de grafite foi usado em educação em saúde sobre a COVID-19. Depois de interagir com o mural, moradores citaram palavras como vacina, máscara, cuidado e trabalho coletivo (Vargas <i>et al.</i>, 2022).</p>
+      </article>
+      <article class="card c-orange">
+        <h3>Divulgar políticas públicas</h3>
+        <p>Como é uma arte de rua e está à disposição de quem passa, o grafite pode ajudar a divulgar políticas públicas (Reimão <i>et al.</i>, 2024).</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band b-yellow" id="contextos">
+  <div class="wrap">
+    <span class="tag t-yellow">3. Contextos</span>
+    <h2>Onde o grafite pode ser usado?</h2>
+    <p class="lead">O grafite ganha espaço nas áreas públicas e também nas privadas, e vem transformando os cenários das comunidades nas grandes cidades (livro, seção 6.4.7).</p>
+    <div class="grid">
+      <article class="card c-orange">
+        <h3>Comunidades e periferias</h3>
+        <p>Mutirões de grafite acontecem em comunidades no Brasil, na América Latina e no mundo. O livro destaca os mutirões mensais da Rede de Resistência Solidária, em Pernambuco.</p>
+      </article>
+      <article class="card c-teal">
+        <h3>Escolas</h3>
+        <p>O mutirão da Restinga pintou o muro de uma escola de Porto Alegre (Cabreira, [s. d.]). Em São Paulo, muros de uma escola de educação infantil receberam grafites com cenas de leitura (Reimão <i>et al.</i>, 2024).</p>
+      </article>
+      <article class="card c-pink">
+        <h3>Saúde e extensão</h3>
+        <p>O mural da COVID-19 em Campos dos Goytacazes nasceu de um projeto de extensão da Faculdade de Medicina de Campos e foi usado em educação em saúde (Vargas <i>et al.</i>, 2022).</p>
+      </article>
+      <article class="card c-yellow">
+        <h3>Espaços culturais e públicos</h3>
+        <p>Em São Paulo, o Museu Aberto de Arte Urbana (MAAU), criado em 2011, e o Beco do Batman, muito visitado, mostram o grafite como parte da paisagem cultural da cidade (Reimão <i>et al.</i>, 2024).</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band b-ink" id="lei">
+  <div class="wrap">
+    <span class="tag t-pink">Cuidados</span>
+    <h2>Grafite não é pichação: o que diz a lei</h2>
+    <p>A Lei nº 12.408/2011 alterou o artigo 65 da Lei nº 9.605/1998 (Brasil, 2011).</p>
+    <div class="law">
+      <h3>O que a lei prevê</h3>
+      <ul>
+        <li><b>Pichar</b> ou sujar de outro modo uma edificação ou monumento urbano é crime, com pena de detenção de 3 meses a 1 ano e multa.</li>
+        <li><b>Grafitar não é crime</b> quando é uma manifestação artística que valoriza o patrimônio público ou privado e o proprietário consente (e, quando couber, o locatário ou arrendatário).</li>
+        <li>Em <b>bem público</b>, é preciso a autorização do órgão competente e o respeito às normas municipais e às regras de preservação do patrimônio histórico e artístico.</li>
+        <li>É <b>proibido vender spray</b> a menores de 18 anos. A venda a maiores exige documento de identidade, e a nota fiscal deve identificar o comprador.</li>
+        <li>A embalagem do spray deve trazer, de forma bem visível, o aviso de que pichação é crime e de que a venda a menores de 18 anos é proibida.</li>
+      </ul>
+      <p>A lei fala em consentimento. Por isso, o mais seguro em uma ação de extensão é ter esse consentimento por escrito.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band b-pink" id="exemplos">
+  <div class="wrap">
+    <span class="tag t-pink">4. Exemplificação</span>
+    <h2>Ações e projetos reais</h2>
+    <div class="grid">
+      <article class="card c-orange">
+        <h3>Mutirão na Restinga (Porto Alegre, RS)</h3>
+        <p>Em uma manhã de dezembro de 2018, pelo menos 10 jovens escritores de graffiti de toda a região metropolitana se reuniram para dar novas cores ao muro do Colégio Ildo Meneghetti. O autor, em um ensaio fotográfico, mostra a solidariedade e a troca de experiências entre os jovens (Cabreira, [s. d.]).</p>
+      </article>
+      <article class="card c-teal">
+        <h3>Rede de Resistência Solidária (Pernambuco)</h3>
+        <p>Segundo o livro, a rede faz mutirões mensais de grafite nas comunidades, sempre pensando em fortalecer o coletivo e apoiar as ações comunitárias.</p>
+      </article>
+      <article class="card c-yellow">
+        <h3>Mural da COVID-19 (Campos dos Goytacazes, RJ)</h3>
+        <p>Pesquisadores entrevistaram 227 moradores que passavam perto de um mural de grafite sobre prevenção da COVID-19. A interação com as imagens fez surgir palavras como vacina, máscara, distanciamento e cuidado (Vargas <i>et al.</i>, 2022).</p>
+      </article>
+      <article class="card c-pink">
+        <h3>Cenas de leitura (São Paulo, SP)</h3>
+        <p>Na zona leste, muros de uma escola municipal de educação infantil receberam grafites de um artista chamado Rony, com crianças lendo e se divertindo. Os pesquisadores destacam a diversidade das crianças retratadas, incluindo uma criança cadeirante (Reimão <i>et al.</i>, 2024).</p>
+      </article>
+    </div>
+
+    <h3 style="margin-top:2em">Proposta de dinâmica presencial</h3>
+    <p>Mural coletivo em papel kraft, com um tema de saúde escolhido por todos. Cada pessoa pinta uma parte do painel com tinta guache ou canetas, e no final o grupo une as partes. A dinâmica dispensa spray e parede e, assim, não depende de autorização.</p>
+  </div>
+</section>
+
+<section class="band b-paper" id="pratica">
+  <div class="wrap">
+    <span class="tag t-orange">Na prática</span>
+    <h2>Como fazer uma ação com grafite</h2>
+    <ol class="steps">
+      <li><b>Converse com a comunidade</b>Escolham o tema juntos, para que a obra faça sentido para quem vive ali.</li>
+      <li><b>Peça o consentimento</b>Fale com o dono do espaço. Em prédio público, procure o órgão responsável.</li>
+      <li><b>Planeje o desenho</b>Faça o esboço no papel e combine quem pinta cada parte.</li>
+      <li><b>Separe o material</b>A venda de spray é proibida para menores de 18 anos. Com adolescentes, use pincel, rolo e tinta.</li>
+      <li><b>Prepare a parede</b>Limpe a superfície e pinte uma base.</li>
+      <li><b>Pintem juntos</b>Façam um mutirão, com todo mundo participando.</li>
+      <li><b>Registre e devolva</b>Tirem fotos e mostrem o resultado para a comunidade.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="band b-teal" id="evidencias">
+  <div class="wrap">
+    <span class="tag t-teal">Sobre as evidências</span>
+    <h2>O que a pesquisa mostra (e o que ainda não mostra)</h2>
+    <p>A maior parte dos estudos sobre grafite é qualitativa: entrevistas, relatos, ensaios e análises de obras. Não encontramos ensaios clínicos nem estudos que meçam, com números, o efeito do grafite sobre a saúde.</p>
+    <p>O estudo de Campos dos Goytacazes é um resumo de anais de evento, com delineamento observacional transversal. Ele mostra os significados que os moradores deram ao mural, mas não prova que o mural mudou comportamentos. O mutirão da Restinga é um ensaio fotográfico, e não um projeto de saúde.</p>
+    <div class="note">
+      <p><b>Em resumo:</b> há bons motivos para usar o grafite em ações de extensão, como expressão, vínculo e comunicação, mas os resultados em saúde ainda precisam de mais pesquisa.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band b-ink" id="referencias">
+  <div class="wrap">
+    <span class="tag t-yellow">Referências</span>
+    <h2>Referências</h2>
+    <ul class="refs">
+      <li>BRASIL. <b>Lei nº 12.408, de 25 de maio de 2011</b>. Altera o art. 65 da Lei nº 9.605, de 12 de fevereiro de 1998, para descriminalizar o ato de grafitar, e dispõe sobre a proibição de comercialização de tintas em embalagens do tipo aerossol a menores de 18 (dezoito) anos. Brasília, DF: Presidência da República, [2011]. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12408.htm">https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12408.htm</a>. Acesso em: 9 out. 2026.</li>
+      <li>BRASIL. Ministério da Saúde. Secretaria de Gestão Estratégica e Participativa. Departamento de Apoio à Gestão Participativa. <b>Ideias e dicas para o desenvolvimento de processos participativos em saúde</b>. Brasília, DF: Ministério da Saúde, 2016. Seção 6.4.7 Grafite.</li>
+      <li>CABREIRA, Leonardo Palhano. Compartilhando pincéis, tintas e histórias: mutirão de graffiti no Colégio Ildo Meneghetti. <b>Fotocronografias</b>, Porto Alegre, p. 40-55, [s. d.]. Disponível em: <a href="https://seer.ufrgs.br/index.php/fotocronografias/article/download/129897/87923/556356">https://seer.ufrgs.br/index.php/fotocronografias/article/download/129897/87923/556356</a>. Acesso em: 9 out. 2026.</li>
+      <li>FURTADO, Janaina Rocha; ZANELLA, Andréa Vieira. Graffiti e cidade: sentidos da intervenção urbana e o processo de constituição dos sujeitos. <b>Revista Mal-Estar e Subjetividade</b>, Fortaleza, v. 9, n. 4, p. 1279-1302, dez. 2009. Disponível em: <a href="https://ojs.unifor.br/rmes/article/download/4910/3920/16161">https://ojs.unifor.br/rmes/article/download/4910/3920/16161</a>. Acesso em: 9 out. 2026.</li>
+      <li>GASTMAN, Roger; NEELON, Caleb. <b>A history of American graffiti</b>. [S. l.]: [s. n.], [2010]. Trecho disponível em: <a href="https://www.allcity.fr/pdf/allcity-the-history-of-american-graffiti.pdf">https://www.allcity.fr/pdf/allcity-the-history-of-american-graffiti.pdf</a>. Acesso em: 9 out. 2026.</li>
+      <li>PIZZINATO, Adolfo; TEDESCO, Pedro de Castro; HAMANN, Cristiano. Intervenções visuais urbanas: sensibilidade(s) em arte, grafite e pichação. <b>Psicologia &amp; Sociedade</b>, v. 29, e169375, 2017. DOI: <a href="https://doi.org/10.1590/1807-0310/2017v29169375">https://doi.org/10.1590/1807-0310/2017v29169375</a>. Acesso em: 9 out. 2026.</li>
+      <li>REIMÃO, Sandra <i>et al.</i> Cenas de leitura em grafites paulistanos. <b>Revista Eco-Pós</b>, Rio de Janeiro, v. 27, n. 3, p. 523-537, 2024. DOI: <a href="https://doi.org/10.29146/eco-ps.v27i3.28209">https://doi.org/10.29146/eco-ps.v27i3.28209</a>. Acesso em: 9 out. 2026.</li>
+      <li>SILVA, Rodrigo Lages e. Escutando a adolescência nas grandes cidades através do grafite. <b>Psicologia: Ciência e Profissão</b>, Brasília, DF, v. 24, n. 4, p. 2-11, dez. 2004. Disponível em: <a href="http://pepsic.bvsalud.org/pdf/pcp/v24n4/v24n4a02.pdf">http://pepsic.bvsalud.org/pdf/pcp/v24n4/v24n4a02.pdf</a>. Acesso em: 9 out. 2026.</li>
+      <li>TAKI 183. <b>Site oficial</b>. [S. d.]. Disponível em: <a href="https://taki183.net">https://taki183.net</a>. Acesso em: 9 out. 2026.</li>
+      <li>VARGAS, André Luiz <i>et al.</i> Educação em Saúde usando mural de rua com grafite para prevenção da COVID-19: interação e construção de significados. <b>Anais da Semana Científica da Faculdade de Medicina de Campos</b>, Campos dos Goytacazes, v. 1, p. 5, 2022. DOI: <a href="https://doi.org/10.29184/anaisscfmc.v12022p5">https://doi.org/10.29184/anaisscfmc.v12022p5</a>. Acesso em: 9 out. 2026.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b>Grafite: arte que conecta</b></p>
+    <p>Universidade Federal de Ciências da Saúde de Porto Alegre (UFCSPA) · Metodologia de Extensão · 2026</p>
+    <ul class="names" aria-label="Integrantes do grupo">
+      <li>Carolina Elisa Strate</li>
+      <li>Ivo Ricardo Lozekam Junior</li>
+      <li>Luiz Antonio Carbonari</li>
+      <li>Manuela Caversan</li>
+      <li>Vania Maciel</li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>
